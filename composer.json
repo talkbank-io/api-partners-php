@@ -1,0 +1,22 @@
+{
+    "name": "talkbank-io/api-partners-php",
+    "description": "API for TalkBank's partners",
+    "license": "MIT",
+    "version": "1.0.3",
+    "require": {
+        "php": "^7.1",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.1"
+    },
+    "authors": [
+        {
+            "name": "Pavel Loginov aka PLoginoff @ TalkBank.io",
+            "email": "ploginoff@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TalkBank\\ApiPartners\\": ""
+        }
+    }
+}
