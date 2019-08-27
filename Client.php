@@ -201,4 +201,32 @@ class Client
     {
         return hash('sha256', $this->partnerId . $this->token . ($params ? json_encode($params) : ''));
     }
+
+    /**
+     * @param string $clientId
+     * @param array|null $params
+     * @example
+     *      $params = [
+     *          'fromBarcode' => '...',
+     *          'toBarcode' => '...',
+     *          'amount' => 10.1,
+     *          'isExtended' => true,
+     *          'extendedOptions' => [
+     *              'has_comment' => '',
+     *              'description' => '',
+     *              'comment_required' => false,
+     *              'comment_placeholder' => ''
+     *          ],
+     *          'smsOptions' => [
+     *              'phone' => '+7...',
+     *              'comment' => 'Ваша ссылка: {{link}}'
+     *          ]
+     *      ]
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function extendedPaymentLink(string $clientId, array $params = null)
+    {
+        return $this->exec('POST', 'extra/' . $clientId . '/extendedPaymentLink', $params);
+    }
 }
