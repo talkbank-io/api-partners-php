@@ -229,4 +229,22 @@ class Client
     {
         return $this->exec('POST', 'extra/' . $clientId . '/extendedPaymentLink', $params);
     }
+
+    /**
+     * @param string $clientId
+     * @param array|null $params
+     * @example
+     *      $params = [
+     *          'phone' => '+7...',
+     *          'city' => 'г. Москва',
+     *          'address' => '...',
+     *          'card_type' => 'tele2'
+     *      ]
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function deliveryCardRequest(string $clientId, array $params = null)
+    {
+        return $this->exec('POST', 'extra/' . $clientId . '/deliveryCardRequest', $params);
+    }
 }
