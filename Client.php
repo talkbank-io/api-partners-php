@@ -229,4 +229,14 @@ class Client
     {
         return $this->exec('POST', 'extra/' . $clientId . '/extendedPaymentLink', $params);
     }
+
+    /**
+     * @param string $barcode
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function sendSecurityCode(string $barcode)
+    {
+        return $this->exec('GET', 'cards/' . $barcode . '/send/security/code');
+    }
 }
