@@ -1,5 +1,5 @@
 {
-    "name": "talkbank-io/api-partners-php",
+    "name": "talkbank/api-partners-php",
     "description": "API for TalkBank's partners",
     "license": "MIT",
     "require": {
