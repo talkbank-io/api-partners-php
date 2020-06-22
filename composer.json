@@ -2,7 +2,6 @@
     "name": "talkbank-io/api-partners-php",
     "description": "API for TalkBank's partners",
     "license": "MIT",
-    "version": "1.0.3",
     "require": {
         "php": "^7.1",
         "ext-json": "*",
